@@ -15,6 +15,14 @@ class LoginViewController: UIViewController {
     private let userName = "root"
     private let password = "password"
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         
@@ -76,8 +84,23 @@ class LoginViewController: UIViewController {
             
             alertForShow.addAction(alertAction)
         }
-        
         present(alertForShow, animated: true)
+    }
+    
+    @objc private func keyboardWillShow(_ notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let keyboardHeight = keyboardSize.height / 5
+            
+            UIView.animate(withDuration: 0.3) {
+                self.view.frame.origin.y = -keyboardHeight
+            }
+        }
+    }
+    
+    @objc private func keyboardWillHide(_ notification: Notification) {
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame.origin.y = 0
+        }
     }
 }
 
