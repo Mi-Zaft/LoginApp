@@ -58,11 +58,11 @@
                                     <action selector="tryLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="oaO-wb-3ds"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="JFx-uP-ScI">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JFx-uP-ScI">
                                 <rect key="frame" x="30" y="488.66666666666669" width="335" height="30.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="forgotUserNameButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lm-GV-2er">
-                                        <rect key="frame" x="0.0" y="0.0" width="141" height="30.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="30.333333333333332"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Username?">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -72,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="forgotPasswordButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwi-kq-WSq">
-                                        <rect key="frame" x="194" y="0.0" width="141" height="30.333333333333332"/>
+                                        <rect key="frame" x="172.66666666666663" y="0.0" width="162.33333333333337" height="30.333333333333332"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
