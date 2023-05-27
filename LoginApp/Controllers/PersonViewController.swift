@@ -20,7 +20,7 @@ class PersonViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-        avatarImage.image = UIImage(named: "avatar")
+        avatarImage.image = UIImage(named: person.avatarName)
         nameLabel.text = "\(person.name) \(person.surname)"
         ageLabel.text = "\(person.age) years old"
     }
