@@ -18,3 +18,48 @@ struct User {
         )
     }
 }
+
+struct Person {
+    let name: String
+    let surname: String
+    let age: Int
+    let avatarName: String
+    let job: Job
+    
+    static func getPerson() -> Person {
+        Person(
+            name: "Maxim",
+            surname: "Evgrafov",
+            age: 27,
+            avatarName: "avatar",
+            job: Job.getJob()
+        )
+    }
+}
+
+struct Job {
+    let title: String
+    let position: String
+    let experience: Double
+    let technologies: [String]
+    
+    static func getJob() -> Job {
+        Job(
+            title: "Programmer",
+            position: "Middle web developer",
+            experience: 5.5,
+            technologies: [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Postgresql",
+                "Docker",
+                "Git",
+                "Linux",
+                "JavaScript",
+                "VueJS",
+                "NodeJS"
+            ]
+        )
+    }
+}
